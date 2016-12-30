@@ -1,0 +1,411 @@
+﻿@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+.highcharts-color-0 {
+    //stroke: #7cb5ec;
+}
+
+
+.highcharts-background {
+    fill: none;
+}
+
+.highcharts-point {
+    stroke-width: 0;
+}
+
+.highcharts-axis.highcharts-color-0 .highcharts-axis-line {
+}
+
+.highcharts-axis.highcharts-color-0 text {
+    fill: #fff !important;
+    stroke: none;
+}
+
+.highcharts-axis.highcharts-color-1 {
+    fill: #fff !important;
+    stroke: none;
+}
+
+.highcharts-title {
+    fill: #fff !important;
+    stroke: none;
+    font-size: 14px !important display:none;
+}
+
+.highcharts-xaxis-grid .highcharts-grid-line {
+    stroke-width: 0px;
+    stroke: #807f80;
+}
+
+.highcharts-xaxis .highcharts-tick {
+    stroke-width: 0px;
+    stroke: #807f80;
+}
+
+.highcharts-minor-grid-line {
+    stroke-dasharray: 1, 1;
+}
+
+
+.highcharts-yaxis-grid .highcharts-grid-line {
+    stroke-width: 0px;
+    stroke: #07cdf1;
+}
+
+/**************************************************************************/
+body {
+    font-family: "Arial",sans-serif;
+    font-size: 11px;
+}
+
+.smallSection {
+    margin-top: 5px;
+    max-width: 100%;
+    height: calc(100% - 10px);
+    position: relative;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    cursor: default;
+    padding: 0 overflow: hidden;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#49484d+0,49484d+44,121013+100 */
+    background: #49484d; /* Old browsers */
+    background: -moz-linear-gradient(top, #49484d 0%, #49484d 44%, #121013 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #49484d 0%,#49484d 44%,#121013 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #49484d 0%,#49484d 44%,#121013 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49484d', endColorstr='#121013',GradientType=0 ); /* IE6-9 */
+}
+
+.wrapper.smallSection {
+    border: 1px solid transparent;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+}
+
+    .wrapper.smallSection.selected {
+        border: 1px solid #fff;
+    }
+
+.smallSection .gaugeHolder,
+.smallSection .chartHolder {
+    position: absolute;
+    padding: 0;
+    /* height:98px; */ bottom: 25px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 67px;
+    z-index: 9;
+    visibility: visible;
+    min-width: 100px;
+}
+
+.smallSection .gaugeHolder {
+    padding: 0;
+    /* height:118px; */
+}
+
+    .smallSection .gaugeHolder .highcharts-container {
+        max-height: calc(100% - 20px);
+    }
+/* .smallSection .chartHolder{height:110px} */
+
+
+.dataLabels {
+    color: #bed730;
+    font-size: 11px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.smallSection .chartHolder .highcharts-background {
+    fill: transparent !important;
+}
+
+.smallSection header {
+    position: relative;
+    max-width: 100%;
+    padding: 10px 10px 2px 10px;
+    overflow: hidden;
+    -webkit-border-radius: 12px 12px 0 0;
+    border-radius: 12px 12px 0 0;
+}
+
+    .smallSection header .target-holder {
+        position: absolute;
+        right: 10px;
+        top: 60%;
+        min-width: 100px;
+        text-align: right;
+        color: #fff;
+        font-size: 14px;
+    }
+
+        .smallSection header .target-holder div {
+            display: inline-block;
+        }
+
+            .smallSection header .target-holder div + div {
+                margin-left: 5px;
+                min-width: 50px;
+            }
+
+.smallSection header {
+    background: #429e2f;
+}
+
+.smallSection.down header {
+    background: #fe0c36;
+}
+
+.smallSection header h2 {
+    margin: 0 0 5px 0;
+    padding: 0;
+    color: #fff;
+    font-size: 1.455em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+    .smallSection header h2 span {
+        font-size: 0.85em;
+        font-weight: 400;
+    }
+
+.smallSection header p {
+    color: #fff;
+    margin: 0;
+    font-size: 2.4em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.smallSection footer {
+    position: absolute;
+    bottom: 0px;
+    padding: 5px;
+    right: 5px;
+    left: 5px;
+}
+
+    .smallSection footer span {
+        color: #fff;
+        font-size: 1.3em;
+        margin-left: 15px;
+        font-weight: 700;
+    }
+
+    .smallSection footer .icon-holder {
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 9;
+    }
+
+        .smallSection footer .icon-holder button {
+            background: transparent;
+            border: 0;
+            color: #646465;
+            outline: none;
+            cursor: pointer;
+            margin: 0;
+            padding: 0;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+        }
+
+    .smallSection footer span::before {
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        width: 0;
+        height: 0;
+        content: "\25b2";
+        color: #429e2f;
+        font-size: 17px;
+        /*border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #429e2f;*/
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+
+    .smallSection footer span.down::before {
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        width: 0;
+        height: 0;
+        content: "\25bc";
+        color: #fe0c36;
+        font-size: 17px;
+        /*border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #429e2f;*/
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+
+    .smallSection footer span.neutral::before {
+        position: absolute;
+        top: 2px;
+        left: 1px;
+        content: "\2194";
+        width: 0;
+        height: 0;
+        font-size: 17px;
+        color: #ffb300;
+        /*border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid #429e2f;*/
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+
+text.highcharts-credits {
+    display: none;
+}
+
+.overlay {
+    background: #fff;
+    top: 66px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    position: absolute;
+    border-radius: 0 0 11px 11px;
+    opacity: .4;
+    display: none;
+}
+
+.wrapper.smallSection.selected .overlay {
+    display: block;
+}
+
+.wrapper.smallSection.selected footer {
+    z-index: 10;
+}
+
+.selected .gaugeHolder,
+.selected .chartHolder {
+    position: absolute;
+    z-index: 10;
+}
+
+.wrapper.smallSection.selected footer span,
+.wrapper.smallSection.selected footer .icon-holder button {
+    color: #444;
+}
+
+.smallSection.selected footer span::before {
+    border-bottom: 10px solid #04fc21;
+}
+
+.smallSection.selected.down footer span::before {
+    border-bottom: 10px solid #fe0c36;
+}
+
+
+
+.smallSection footer .icon-holder button.active {
+    color: #fff;
+}
+
+.smallSection footer .icon-holder .icon-switch {
+    position: absolute;
+    right: 36px;
+    width: auto;
+}
+
+    .smallSection footer .icon-holder .icon-switch button {
+        position: absolute;
+        right: 20px;
+    }
+
+.lightTheme .smallSection {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9a999c+0,424142+100 */
+    background: #9a999c; /* Old browsers */
+    background: -moz-linear-gradient(top, #9a999c 0%, #424142 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #9a999c 0%,#424142 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #9a999c 0%,#424142 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a999c', endColorstr='#424142',GradientType=0 ); /* IE6-9 */
+}
+
+
+    .lightTheme .smallSection header {
+        background: #9cd191;
+    }
+
+    .lightTheme .smallSection.down header {
+        background: #f8b0b0;
+    }
+
+    .lightTheme .smallSection footer .icon-holder button {
+        color: #999;
+    }
+
+    .lightTheme .smallSection header h2,
+    .lightTheme .smallSection header p {
+        color: #3d3c3e;
+    }
+
+    .lightTheme .smallSection footer span::before {
+        border-bottom: 10px solid #9cd191;
+    }
+
+    .lightTheme .smallSection.down footer span::before {
+        border-bottom: 10px solid #f8b0b0;
+    }
+
+.lightTheme .wrapper.smallSection {
+    border: 1px solid #666;
+}
+
+.lightTheme .smallSection footer .icon-holder button.active {
+    color: #fff;
+}
+
+.smallSection.selected footer .icon-holder button.active {
+    color: #000;
+}
+
+
+.selected .chartHolder {
+    position: absolute;
+    z-index: 10;
+    top: 67px;
+    left: 0;
+    right: 0;
+}
+
+.pushBack {
+    z-index: -1 !important;
+}
+
+rect.highcharts-label-box.highcharts-data-label-box {
+    stroke-width: 0 !important;
+}
+
+
+text.highcharts-credits {
+    display: none;
+}

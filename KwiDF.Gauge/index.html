@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Gauge</title>
+    <link href="Resources/CSS/Highcharts.Gauge.css" rel="stylesheet" />
+    <script src="Resources/JS/jquery.min.js"></script>
+    <script src="Resources/JS/highcharts.js"></script>
+    <script src="Resources/JS/exporting.js"></script>
+    <script src="Resources/JS/highcharts-more.js"></script>
+    <script src="Resources/JS/Gauge.js"></script>
+
+    <style>
+        body {
+            background: #2a2a2a;
+        }
+    </style>
+
+</head>
+<body>
+    <script>var proClient = true;</script>
+    <button type="button" onclick="call_renderCore()">Call renderCore</button>
+
+    <div id="js_chart"></div>
+
+    <script>
+
+        function call_renderCore() {
+            /*
+            Paste in the JSON data copied to the clipboard from within your JS Visualization instance
+             */
+
+            var sfdata = {
+                "columns": [
+                  "Last([LiquidHandlingCapacity])",
+                  "Last([LiquidHandlingTarget])",
+                  "Last([WaterHandlingCapacity])",
+                  "Last([WaterHandlingTarget])",
+                  "Last([EffluentWaterHandlingCapacity])",
+                  "Last([EffluentWaterHandlingTarget])",
+                  "Last([SeaWaterHandlingCapacity])",
+                  "Last([SeaWaterHandlingTarget])"
+                ],
+                "baseTableHints": {
+                    "rows": 755,
+                    "visible": 453,
+                    "marked": 453,
+                    "tableName": "OS_Manager_DataByGc",
+                    "settingName": "OS_Column"
+                },
+                "data": [
+                  {
+                      "items": [
+                        50,
+                        80,
+                        60,
+                        70,
+                        55,
+                        75,
+                        85,
+                        90
+                      ],
+                      "hints": {
+                          "marked": true,
+                          "index": 0
+                      }
+                  },
+                  {
+                      "items": [
+                        50,
+                        80,
+                        60,
+                        70,
+                        55,
+                        75,
+                        85,
+                        90
+                      ],
+                      "hints": {
+                          "marked": true,
+                          "index": 1
+                      }
+                  },
+                  {
+                      "items": [
+                        50,
+                        80,
+                        60,
+                        70,
+                        55,
+                        75,
+                        85,
+                        90
+                      ],
+                      "hints": {
+                          "marked": true,
+                          "index": 2
+                      }
+                  }
+                ],
+                "additionalTables": [],
+                "user": "balam",
+                "static": false,
+                "wait": 0,
+                "runtime": {},
+                "legend": true,
+                "config": {
+                    "noOfGauges": "4",
+                    "actualVal": [
+                      30,
+                      40,
+                      60,
+                      50
+                    ],
+                    "category": [
+                      "LiquidHandleCapacity",
+                      "WaterHandleCapacity",
+                      "EffluentWaterCapacity",
+                      "SeaWaterCapacity"
+                    ],
+                    "title": [
+                      "Liquid Handling Capacity (%)",
+                      "Water Handling Capacity (%)",
+                      "Effluent Water Capacity (%)",
+                      "Sea Water Capacity (%)"
+                    ],
+                    "Script": "OS1-Gauge"
+                },
+                "style": "font-family:\"Arial\",sans-serif;font-size:11px;font-style:Normal;font-weight:Normal;color:#C8C8C8;background-color:transparent;border-style:None;border-top-color:#FFFFFF;border-right-color:#FFFFFF;border-bottom-color:#FFFFFF;border-left-color:#FFFFFF;border-top-width:0px;border-right-width:0px;border-bottom-width:0px;border-left-width:0px;border-top-left-radius:0px;border-top-right-radius:0px;border-bottom-right-radius:0px;border-bottom-left-radius:0px;padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;margin-top:0px;margin-bottom:0px;margin-left:0px;margin-right:0px;"
+            }
+
+            renderCore(sfdata);
+
+            //display_data ( sfdata );
+        }
+
+        function display_data(sfdata) {
+            if (typeof introspect == 'function') {
+                document.getElementById("js_chart").innerText = introspect("Data: \n\n", sfdata);
+            }
+        }
+    </script>
+
+
+</body>
+</html>
